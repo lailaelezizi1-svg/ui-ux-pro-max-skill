@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caffè Napoli — Espresso e pasticceria dal 1952</title>
+<meta name="description" content="Caffè Napoli: espresso napoletano, sfogliatelle e babà fatti ogni mattina. Vieni a trovarci.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#92400E; --on-primary:#fff; --secondary:#B45309;
+  --bg:#FEF3C7; --fg:#78350F; --card:#fff; --muted:#475569; --border:#FDE68A;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:18px}
+h1,h2,h3{font-family:'Playfair Display SC',serif;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+header{position:sticky;top:0;z-index:10;background:rgba(254,243,199,.95);backdrop-filter:blur(6px);border-bottom:2px solid var(--border)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Playfair Display SC',serif;font-weight:700;font-size:1.3rem;text-decoration:none}
+nav ul{display:flex;gap:24px;list-style:none}
+nav ul a{text-decoration:none;font-weight:600;padding:8px 4px;transition:color .2s}
+nav ul a:hover{color:var(--secondary)}
+.btn{display:inline-block;background:var(--primary);color:var(--on-primary);padding:14px 28px;border-radius:999px;font-weight:700;text-decoration:none;cursor:pointer;border:2px solid var(--primary);transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px);background:var(--fg);border-color:var(--fg)}
+.btn.ghost{background:transparent;color:var(--primary)}
+.btn.ghost:hover{background:var(--primary);color:#fff}
+.hero{padding:96px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:20px}
+.hero p{font-size:1.2rem;max-width:34em;margin-bottom:32px}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+.cup{background:var(--primary);color:#fff;border-radius:var(--radius);padding:40px;text-align:center;box-shadow:12px 12px 0 var(--secondary)}
+.cup svg{width:120px;height:120px;margin-bottom:12px}
+.cup strong{font-family:'Playfair Display SC',serif;font-size:2rem;display:block}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.sub{color:var(--muted);margin-bottom:40px;max-width:38em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.card{background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:28px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--primary)}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.price{display:inline-block;margin-top:12px;font-weight:700;color:var(--primary)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.step{counter-increment:s;background:var(--primary);color:#fff;border-radius:var(--radius);padding:28px}
+.step::before{content:counter(s);font-family:'Playfair Display SC',serif;font-size:2.6rem;display:block;opacity:.8}
+.band{background:var(--primary);color:#fff}
+.band .sub{color:#FDE68A}
+.hours{width:100%;max-width:420px;border-collapse:collapse}
+.hours td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.3)}
+.hours td:last-child{text-align:right;font-weight:700}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+footer{padding:32px 0;text-align:center;border-top:2px solid var(--border);color:var(--muted);font-size:.95rem}
+@media(max-width:800px){
+  .hero .wrap,.contact{grid-template-columns:1fr}
+  nav ul{display:none}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Principale">
+      <a class="logo" href="#top">Caffè Napoli</a>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#storia">Storia</a></li>
+        <li><a href="#orari">Orari</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+      <a class="btn" href="#contatti">Prenota</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Il vero caffè napoletano, ogni giorno.</h1>
+        <p>Espresso cremoso, sfogliatelle appena sfornate e babà al rum. Una pausa di Napoli nel cuore della tua città, dal 1952.</p>
+        <div class="cta">
+          <a class="btn" href="#menu">Scopri il menu</a>
+          <a class="btn ghost" href="#orari">Orari di apertura</a>
+        </div>
+      </div>
+      <div class="cup" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M7 1v3M11 1v3M15 1v3"/></svg>
+        <strong>1,20 €</strong>
+        <span>L'espresso al banco</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Il nostro menu</h2>
+      <p class="sub">Ingredienti semplici, ricette di famiglia, tutto preparato ogni mattina nel nostro laboratorio.</p>
+      <div class="grid">
+        <article class="card"><h3>Espresso napoletano</h3><p>Miscela intensa e cremosa, servito con il bicchierino d'acqua.</p><span class="price">1,20 €</span></article>
+        <article class="card"><h3>Caffè alla nocciola</h3><p>Espresso montato con crema di nocciola, la nostra specialità.</p><span class="price">2,00 €</span></article>
+        <article class="card"><h3>Sfogliatella riccia</h3><p>Pasta croccante a mille strati, ripieno di ricotta e canditi.</p><span class="price">2,50 €</span></article>
+        <article class="card"><h3>Babà al rum</h3><p>Soffice, imbevuto di sciroppo al rum, con panna a richiesta.</p><span class="price">3,00 €</span></article>
+        <article class="card"><h3>Pastiera</h3><p>Grano, ricotta e fiori d'arancio: un classico non solo di Pasqua.</p><span class="price">3,50 €</span></article>
+        <article class="card"><h3>Cornetto fresco</h3><p>Vuoto, alla crema o alla marmellata, sfornato alle 6:30.</p><span class="price">1,40 €</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="storia" class="band">
+    <div class="wrap">
+      <h2>La nostra storia in 3 passi</h2>
+      <p class="sub">Da tre generazioni lavoriamo con lo stesso rispetto per il caffè.</p>
+      <div class="steps" style="--x:0">
+        <div class="step" style="background:var(--fg)"><h3>1952</h3><p>Nonno Gennaro apre il banco in una piccola via del centro.</p></div>
+        <div class="step" style="background:var(--secondary)"><h3>Oggi</h3><p>Tostiamo in piccoli lotti e prepariamo i dolci a mano.</p></div>
+        <div class="step" style="background:var(--fg)"><h3>Da te</h3><p>Vieni al banco, siediti al tavolino o ordina da portare via.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="orari">
+    <div class="wrap contact">
+      <div>
+        <h2>Orari</h2>
+        <p class="sub">Siamo aperti tutta la settimana.</p>
+        <table class="hours" style="color:var(--fg)">
+          <tr><td style="border-color:var(--border)">Lunedì – Venerdì</td><td style="border-color:var(--border)">6:30 – 20:00</td></tr>
+          <tr><td style="border-color:var(--border)">Sabato</td><td style="border-color:var(--border)">7:00 – 21:00</td></tr>
+          <tr><td style="border-color:var(--border)">Domenica</td><td style="border-color:var(--border)">7:30 – 14:00</td></tr>
+        </table>
+      </div>
+      <div id="contatti">
+        <h2>Contatti</h2>
+        <p class="sub">Per prenotazioni, ordini di dolci e torte su misura.</p>
+        <p><strong>Indirizzo:</strong> Via Toledo 12, Napoli</p>
+        <p><strong>Telefono:</strong> <a href="tel:+390810000000">081 000 0000</a></p>
+        <p style="margin-bottom:24px"><strong>Email:</strong> <a href="mailto:ciao@caffenapoli.example">ciao@caffenapoli.example</a></p>
+        <a class="btn" href="tel:+390810000000">Chiamaci</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Caffè Napoli — Dati di esempio (indirizzo e telefono da sostituire).</div>
+</footer>
+</body>
+</html>
